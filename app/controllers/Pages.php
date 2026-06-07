@@ -2,17 +2,19 @@
 
 class Pages extends Controller {
     public function __construct(){
-        $this->postModel = $this->model('Post');
         }
     public function index(){ 
+
         $data = [
-            'title' => 'Welcome to LightMVC'
+            'title' => 'Shared Posts',
+            'description' => 'Simple social media app built on the MVC pattern with PHP OOP and MySQL.'
         ];
         $this->view('pages/index', $data);        
         }
     public function about(){
         $data = [
-            'title' => 'About Us'
+            'title' => 'About Us',
+            'description' => 'Learn more about our shared posts application.'
         ];
         $this->view('pages/about', $data);
         }
